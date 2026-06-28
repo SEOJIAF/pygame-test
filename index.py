@@ -29,10 +29,15 @@ def get_background(name):
     for i in range(WIDHT // width + 1):
         for j in range(HEIGHT // height + 1):
             pos = [i * width, j * height]
-            tiles
+            tiles.append(pos)
+
+    return tiles, image
+
+
 
 def main(window):
     clock = pygame.time.Clock()
+    background = get_background("Blue.png")
 
     run = True
     while run:
